@@ -1,0 +1,126 @@
+body {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    grid-template-areas: "playerPick playerScore computerScore computerPick"
+                         "choice choice choice choice"
+                         "playerPoints playerPoints computerPoints computerPoints";
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.5fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+#rock {
+    background-image: url('stone.png');
+    background-size: cover;
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    font-size: 2rem;
+    border: none;
+}
+
+#paper {
+    background-image: url('paper.jpg');
+    background-size: cover;
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    font-size: 2rem;
+    border: none;
+}
+
+#scissor {
+    background-image: url('scissor.jpg');
+    background-size: cover;
+    /* max-width: 100%; */
+    width: 200px;
+    height: 200px;
+    font-size: 2rem;
+    border: none;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: monospace;
+}
+
+.buttonsWrapper {
+    background-color: #8ca0ff;
+    grid-area: choice;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#playerPick {
+    background-color: #ffa08c;
+    grid-area: playerPick;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 0.5fr) minmax(0, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+#computerPick {
+    background-color: #ffa08c;
+    grid-area: computerPick;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 0.5fr) minmax(0, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+#playerScore {
+    background-color: green;
+    grid-area: playerScore;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 0.5fr) minmax(0, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+#computerScore {
+    background-color: palegoldenrod;
+    grid-area: computerScore;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 0.5fr) minmax(0, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.points {
+    background-color: #8cffa0;
+    grid-area: points;
+}
+
+#playerPoints {
+    background-color: green;
+    grid-area: playerPoints;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+#computerPoints {
+    background-color: red;
+    grid-area: computerPoints;
+    justify-self: stretch;
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+
+
+
